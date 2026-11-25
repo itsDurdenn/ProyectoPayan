@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta emocional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navegacion" aria-label="Menú principal">
+    <a class="navegacion__enlace" href="index.html">Inicio</a>
+    <a class="navegacion__enlace navegacion__enlace--activo" href="encuesta.html">Encuesta</a>
+</nav>
+
+<main class="encuesta-pagina">
+    <header class="encuesta-encabezado">
+        <p class="etiqueta">Cuestionario estudiantil</p>
+        <h1>¿Cómo te sientes?</h1>
+        <p>Esta encuesta ayuda a reflexionar sobre las emociones. Responde con sinceridad; no hay respuestas incorrectas.</p>
+    </header>
+
+    <form id="formularioEmociones" class="encuesta-formulario" novalidate>
+        <fieldset class="grupo-preguntas">
+            <legend>Información general</legend>
+
+            <label for="nombre">Nombre o apodo <span>(opcional)</span></label>
+            <input type="text" id="nombre" name="nombre" maxlength="40" placeholder="Escribe tu nombre">
+
+            <label for="edad">Edad</label>
+            <select id="edad" name="edad" required>
+                <option value="">Selecciona una opción</option>
+                <option>10 años</option>
+                <option>11 años</option>
+                <option>12 años</option>
+                <option>13 años</option>
+                <option>14 años</option>
+                <option>15 años</option>
+                <option>16 años o más</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="grupo-preguntas">
+            <legend>Estado emocional</legend>
+
+            <p class="pregunta">1. ¿Qué emoción predomina en ti hoy?</p>
+            <div class="opciones opciones--emociones">
+                <label><input type="radio" name="emocion" value="Alegría" required><span>😊 Alegría</span></label>
+                <label><input type="radio" name="emocion" value="Calma"><span>😌 Calma</span></label>
+                <label><input type="radio" name="emocion" value="Tristeza"><span>😔 Tristeza</span></label>
+                <label><input type="radio" name="emocion" value="Enojo"><span>😠 Enojo</span></label>
+                <label><input type="radio" name="emocion" value="Miedo"><span>😟 Miedo</span></label>
+                <label><input type="radio" name="emocion" value="Sorpresa"><span>😲 Sorpresa</span></label>
+            </div>
+
+            <p class="pregunta">2. ¿Qué tan intensa es esta emoción?</p>
+            <div class="opciones">
+                <label><input type="radio" name="intensidad" value="Muy leve" required><span>Muy leve</span></label>
+                <label><input type="radio" name="intensidad" value="Leve"><span>Leve</span></label>
+                <label><input type="radio" name="intensidad" value="Moderada"><span>Moderada</span></label>
+                <label><input type="radio" name="intensidad" value="Alta"><span>Alta</span></label>
+                <label><input type="radio" name="intensidad" value="Muy alta"><span>Muy alta</span></label>
+            </div>
+
+            <p class="pregunta">3. ¿Hace cuánto tiempo te sientes así?</p>
+            <select name="duracion" required>
+                <option value="">Selecciona una opción</option>
+                <option>Hace unas horas</option>
+                <option>Desde ayer</option>
+                <option>Desde hace varios días</option>
+                <option>Desde hace más de una semana</option>
+                <option>Es constante</option>
+            </select>
+
+            <p class="pregunta">4. ¿Qué situación ha influido más en tus emociones?</p>
+            <div class="opciones opciones--cuatro">
+                <label><input type="radio" name="situacion" value="Familia" required><span>Familia</span></label>
+                <label><input type="radio" name="situacion" value="Amistades"><span>Amistades</span></label>
+                <label><input type="radio" name="situacion" value="Estudios"><span>Estudios</span></label>
+                <label><input type="radio" name="situacion" value="Trabajo personal"><span>Trabajo personal</span></label>
+                <label><input type="radio" name="situacion" value="Redes sociales"><span>Redes sociales</span></label>
+                <label><input type="radio" name="situacion" value="Salud"><span>Salud</span></label>
+                <label><input type="radio" name="situacion" value="Situación económica"><span>Situación económica</span></label>
+                <label><input type="radio" name="situacion" value="Otro"><span>Otro</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo-preguntas">
+            <legend>Tu cuerpo y tus pensamientos</legend>
+
+            <p class="pregunta">5. ¿Cómo se manifiestan tus emociones en el cuerpo?</p>
+            <div class="opciones opciones--cuatro">
+                <label><input type="checkbox" name="cuerpo" value="Corazón acelerado"><span>Corazón acelerado</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Dolor de cabeza"><span>Dolor de cabeza</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Tensión muscular"><span>Tensión muscular</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Cansancio"><span>Cansancio</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Dificultad para respirar"><span>Dificultad para respirar</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Sudoración"><span>Sudoración</span></label>
+                <label><input type="checkbox" name="cuerpo" value="Sin cambios"><span>Sin cambios</span></label>
+            </div>
+
+            <p class="pregunta">6. ¿Con qué frecuencia tienes dificultad para concentrarte?</p>
+            <div class="opciones">
+                <label><input type="radio" name="concentracion" value="Nunca" required><span>Nunca</span></label>
+                <label><input type="radio" name="concentracion" value="Casi nunca"><span>Casi nunca</span></label>
+                <label><input type="radio" name="concentracion" value="A veces"><span>A veces</span></label>
+                <label><input type="radio" name="concentracion" value="Frecuentemente"><span>Frecuentemente</span></label>
+                <label><input type="radio" name="concentracion" value="Siempre"><span>Siempre</span></label>
+            </div>
+
+            <p class="pregunta">7. ¿Qué pensamientos aparecen con mayor frecuencia?</p>
+            <div class="opciones opciones--cuatro">
+                <label><input type="checkbox" name="pensamientos" value="Positivos"><span>Positivos o motivantes</span></label>
+                <label><input type="checkbox" name="pensamientos" value="Preocupación"><span>Preocupación</span></label>
+                <label><input type="checkbox" name="pensamientos" value="Autocrítica"><span>Autocrítica</span></label>
+                <label><input type="checkbox" name="pensamientos" value="Tristeza"><span>Pensamientos tristes</span></label>
+                <label><input type="checkbox" name="pensamientos" value="Enojo"><span>Pensamientos enojados</span></label>
+                <label><input type="checkbox" name="pensamientos" value="Calma"><span>Pensamientos tranquilos</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo-preguntas">
+            <legend>Relaciones y apoyo</legend>
+
+            <p class="pregunta">8. ¿Tienes a alguien con quien compartir cómo te sientes?</p>
+            <div class="opciones">
+                <label><input type="radio" name="apoyo" value="Sí, siempre" required><span>Sí, siempre</span></label>
+                <label><input type="radio" name="apoyo" value="Sí, a veces"><span>Sí, a veces</span></label>
+                <label><input type="radio" name="apoyo" value="Pocas veces"><span>Pocas veces</span></label>
+                <label><input type="radio" name="apoyo" value="No"><span>No</span></label>
+            </div>
+
+            <p class="pregunta">9. ¿Con quién te sentirías más cómodo hablando de tus emociones?</p>
+            <select name="personaApoyo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Padre, madre o tutor</option>
+                <option>Hermano o hermana</option>
+                <option>Un amigo o amiga</option>
+                <option>Profesor o profesora</option>
+                <option>Orientador escolar</option>
+                <option>Psicólogo o profesional de salud</option>
+                <option>Prefiero expresarlo por escrito</option>
+                <option>No tengo a nadie</option>
+            </select>
+
+            <p class="pregunta">10. ¿Las personas de tu entorno respetan tus sentimientos?</p>
+            <div class="opciones">
+                <label><input type="radio" name="respeto" value="Siempre" required><span>Siempre</span></label>
+                <label><input type="radio" name="respeto" value="Casi siempre"><span>Casi siempre</span></label>
+                <label><input type="radio" name="respeto" value="A veces"><span>A veces</span></label>
+                <label><input type="radio" name="respeto" value="Casi nunca"><span>Casi nunca</span></label>
+                <label><input type="radio" name="respeto" value="Nunca"><span>Nunca</span></label>
+            </div>
+        </fieldset>
+
+        <fieldset class="grupo-preguntas">
+            <legend>Manejo y bienestar</legend>
+
+            <p class="pregunta">11. ¿Qué haces normalmente para mejorar tu ánimo?</p>
+            <div class="opciones opciones--cuatro">
+                <label><input type="checkbox" name="estrategias" value="Hablar con alguien"><span>Hablar con alguien</span></label>
+                <label><input type="checkbox" name="estrategias" value="Escuchar música"><span>Escuchar música</span></label>
+                <label><input type="checkbox" name="estrategias" value="Hacer ejercicio"><span>Hacer ejercicio</span></label>
+                <label><input type="checkbox" name="estrategias" value="Dormir"><span>Dormir o descansar</span></label>
+                <label><input type="checkbox" name="estrategias" value="Respirar"><span>Respirar profundamente</span></label>
+                <label><input type="checkbox" name="estrategias" value="Aislarme"><span>Aislarme</span></label>
+                <label><input type="checkbox" name="estrategias" value="Escribir"><span>Escribir mis emociones</span></label>
+                <label><input type="checkbox" name="estrategias" value="No hago nada"><span>No hago nada</span></label>
+            </div>
+
+            <p class="pregunta">12. ¿Cómo calificarías tu sueño durante la última semana?</p>
+            <div class="opciones">
+                <label><input type="radio" name="sueño" value="Excelente" required><span>Excelente</span></label>
+                <label><input type="radio" name="sueño" value="Bueno"><span>Bueno</span></label>
+                <label><input type="radio" name="sueño" value="Regular"><span>Regular</span></label>
+                <label><input type="radio" name="sueño" value="Malo"><span>Malo</span></label>
+                <label><input type="radio" name="sueño" value="Muy malo"><span>Muy malo</span></label>
+            </div>
+
+            <label for="comentario">13. ¿Hay algo que quieras contar sobre cómo te sientes? <span>(opcional)</span></label>
+            <textarea id="comentario" name="comentario" rows="5" maxlength="500" placeholder="Puedes escribir libremente..."></textarea>
+
+            <label for="ayuda">14. ¿Necesitas ayuda ahora mismo?</label>
+            <select id="ayuda" name="ayuda" required>
+                <option value="">Selecciona una opción</option>
+                <option>No necesito ayuda</option>
+                <option>Me gustaría hablar con alguien</option>
+                <option>Necesito apoyo pronto</option>
+                <option>Necesito ayuda urgente</option>
+            </select>
+        </fieldset>
+
+        <p id="mensajeError" class="mensaje-error" role="alert"></p>
+        <button type="submit" class="boton boton--encuesta">Enviar respuestas</button>
+    </form>
+
+    <section class="resumen" id="resumen" hidden>
+        <p class="etiqueta">Resultado registrado</p>
+        <h2>Gracias por compartir</h2>
+        <p id="textoResumen"></p>
+        <p>Recuerda: si alguna emoción te preocupa o afecta tu vida diaria, habla con un adulto de confianza o un profesional.</p>
+        <button type="button" id="nuevoFormulario" class="boton boton--encuesta">Responder nuevamente</button>
+    </section>
+</main>
+
+<script src="encuesta.js"></script>
+</body>
+</html>
